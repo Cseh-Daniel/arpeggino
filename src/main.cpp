@@ -4,12 +4,15 @@
 int myFunction(int, int);
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+
+  pinMode(23, OUTPUT);
+ digitalWrite(23, HIGH);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  digitalWrite(23, !digitalRead(23));
+  delay(1000);
 }
 
 // put function definitions here:
